@@ -51,6 +51,12 @@ span {
 #reset:hover {
     background-color: #d16a44;
 }
+@media (max-width: 600px) {
+    .container {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
 
 
 
