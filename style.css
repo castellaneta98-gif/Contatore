@@ -3,10 +3,11 @@
     margin-top: 180px;
     background-color: rgb(231, 236, 236, 0.6);
     border-radius: 10px;
-    margin-right: 380px;
-    margin-left: 380px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 200px;
-    padding: 10px;
+    padding: 20px;
     
 }
 body {
@@ -23,6 +24,23 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 8px;
+    min-width: 120px;
+}
+@media (max-width: 768px) {
+    button {
+        font-size: 18px;
+        padding: 12px 24px;
+        margin: 8px;
+        min-width: 100px;
+    }
+}
+@media (max-width: 480px) {
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 5px;
+        min-width: 80px;
+    }
 }
 #counter {
     color: black;
@@ -52,12 +70,6 @@ span {
 }
 #reset:hover {
     background-color: #4a4a4a;
-}
-@media (max-width: 600px) {
-    .container {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
 }
 
 
