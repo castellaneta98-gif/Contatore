@@ -1,21 +1,32 @@
 let counter = 0;
-const counterElement = document.getElementById('counter');
-counterElement.textContent = counter;
-const incrementButton = document.getElementById('increment');
-const decrementButton = document.getElementById('decrement');
-const resetButton = document.getElementById('reset');
-const increment = () => {
+const counterElement = document.querySelector('#counter');
+const incrementButton = document.createElement('button');
+incrementButton.textContent = '+';
+incrementButton.id = 'increment';
+const resetButton = document.createElement('button');
+resetButton.textContent = 'Resetta';
+resetButton.id = 'reset';
+const decrementButton = document.createElement('button');
+decrementButton.textContent = '-';
+decrementButton.id = 'decrement';
+const container = document.querySelector('.container');
+container.appendChild(incrementButton);
+container.appendChild(resetButton);
+container.appendChild(decrementButton);
+
+
+incrementButton.addEventListener('click', () => {
     counter++;
     counterElement.textContent = counter;
-}
-const decrement = () => {
-    counter--;
-    counterElement.textContent = counter;
-}
-const reset = () => {
+});
+
+resetButton.addEventListener('click', () => {
     counter = 0;
     counterElement.textContent = counter;
-}
-incrementButton.addEventListener('click', increment);
-decrementButton.addEventListener('click', decrement);
-resetButton.addEventListener('click', reset);
+});
+
+decrementButton.addEventListener('click', () => {
+    counter--;
+    counterElement.textContent = counter;
+});
+
